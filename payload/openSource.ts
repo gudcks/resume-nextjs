@@ -4,6 +4,23 @@ const openSource: IOpenSource.Payload = {
   disable: false,
   list: [
     {
+      title: 'OpenIDEA (개발 환경)',
+      descriptions: [
+        {
+          content:
+            '한 폴더에 여러 Gradle 프로젝트가 있어도 첫 번째만 인식하던 IDE에 <b>독립 Gradle 프로젝트 연결·해제 기능</b>을 추가했습니다. 원 저장소의 <code>main</code> 브랜치에 반영되었습니다. (2026.11.05)',
+          weight: 'BOLD',
+        },
+        {
+          content:
+            '빌드 스크립트를 수정하지 않고 한 창에서 여러 프로젝트를 관리할 수 있습니다. 각 프로젝트의 Gradle Wrapper를 사용하고, 이름이 같은 태스크도 선택한 프로젝트에서 실행되도록 구현했습니다.',
+        },
+        {
+          content: '관련 링크: <a href="https://github.com/l0ng-ai/openidea/pull/1413">PR #1413</a>',
+        },
+      ],
+    },
+    {
       title: 'VHS (터미널 녹화·렌더링 도구)',
       descriptions: [
         {
