@@ -16,7 +16,16 @@ const openSource: IOpenSource.Payload = {
             '빌드 스크립트를 수정하지 않고 한 창에서 여러 프로젝트를 관리할 수 있습니다. 각 프로젝트의 Gradle Wrapper를 사용하고, 이름이 같은 태스크도 선택한 프로젝트에서 실행되도록 구현했습니다.',
         },
         {
-          content: '관련 링크: <a href="https://github.com/l0ng-ai/openidea/pull/1413">PR #1413</a>',
+          content:
+            '프로젝트 창 내 Java 빌드 간 <b>JDT LS 공유 기능</b>을 구현해 원 저장소에 반영했습니다. 7개 모듈 환경에서 JDT LS 메모리 사용량을 <b>약 5.6GB에서 3GB로 줄였습니다(약 46%)</b>.',
+        },
+        {
+          content:
+            '서버 전환 시 종료·재시작과 문서 복원을 처리하고, 독립 Gradle 빌드 간 클래스패스·실행 대상 분리를 통합 테스트로 검증했습니다.',
+        },
+        {
+          content:
+            '관련 링크: <a href="https://github.com/l0ng-ai/openidea/pull/1413">PR #1413</a> · <a href="https://github.com/l0ng-ai/openidea/pull/2272">PR #2272</a>',
         },
       ],
     },
