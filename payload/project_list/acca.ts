@@ -6,12 +6,22 @@ export const acca: IProject.Item = {
   where: '마이다스인 (백엔드 개발자)',
   descriptions: [
     {
-      content: '5만 건 외부 큐 적재 2시간 → 1분',
+      content: '대량 메일·SMS 발송 처리',
       weight: 'MEDIUM',
       descriptions: [
         {
-          content:
-            '발송 대상·본문 전체 적재와 장시간 트랜잭션, 순차 Kafka 발행이 메모리·DB 부하와 재시작 후 중복 발송 위험을 만들었습니다. 이를 200건 단위 cursor batch·Kafka 비동기 발행·병렬 consumer로 재설계하고 외부 API 호출을 트랜잭션 밖으로 옮겼습니다.',
+          content: `<figure class="resume-project-flow">
+            <figcaption>
+              <strong>2시간에서 1분</strong>
+              <span>안내 발송 5만 건의 외부 큐 접수 시간</span>
+            </figcaption>
+            <ol role="list" aria-label="안내 발송 처리 순서">
+              <li>안내 요청</li>
+              <li>발송 대상 준비<small>200건씩 조회·선점</small></li>
+              <li class="resume-project-flow-key resume-project-flow-dashed">외부 큐 접수 완료<small>Kafka 비동기 발행</small></li>
+              <li>메일·SMS 발송</li>
+            </ol>
+          </figure>`,
         },
         {
           content:
@@ -19,7 +29,7 @@ export const acca: IProject.Item = {
         },
         {
           content:
-            '<b>5만 건의 외부 큐 적재 완료까지 걸리는 애플리케이션 처리 시간을 2시간에서 1분으로 단축</b>했습니다. 별도 SES 발송 단계에서는 <b>초당 약 40건</b>의 처리량을 달성했습니다.',
+            '외부 API 호출을 트랜잭션 밖으로 옮기고 발송 결과 이벤트를 병렬로 처리했습니다. SES 발송 단계에서는 <b>초당 약 40건</b>의 처리량을 달성했습니다.',
         },
       ],
     },
@@ -28,8 +38,18 @@ export const acca: IProject.Item = {
       weight: 'MEDIUM',
       descriptions: [
         {
+          content: `<figure class="resume-project-flow">
+            <ol role="list" aria-label="라이브면접 답변 전사와 다음 질문 처리">
+              <li>답변 음성 입력</li>
+              <li class="resume-project-flow-dashed">실시간 음성 전사</li>
+              <li class="resume-project-flow-key">전사 실패·빈 결과 시<small>해당 답변 녹음으로 재전사</small></li>
+              <li>답변 제출<small>SSE로 다음 질문 수신</small></li>
+            </ol>
+          </figure>`,
+        },
+        {
           content:
-            'AI 라이브면접 프로토타입의 면접 엔진을 ACCA Java 백엔드로 이식했습니다. SSE 기반 면접 진행과 실시간 음성 전사 실패 시 재전사 경로를 구현하고, 개발 환경에서 응시 서비스 기동을 확인했습니다.',
+            '프로토타입의 면접 엔진을 ACCA Java 백엔드로 이식하고, 단건 재전사 경로를 구현했습니다. 개발 환경에서 응시 서비스 기동을 확인했습니다.',
         },
         {
           content:
