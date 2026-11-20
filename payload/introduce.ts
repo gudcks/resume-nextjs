@@ -6,7 +6,7 @@ const introduce: IIntroduce.Payload = {
   contents: [
     {
       content:
-        'Java/Spring 백엔드 개발자입니다. 메일·SMS 5만 건의 외부 큐 적재 완료 시간을 2시간에서 1분으로 단축하고, AI 라이브면접 엔진을 Java로 이식했습니다.',
+        '대량 작업에서 처리 상태를 추적하고, 실패한 작업을 복구할 수 있도록 백엔드를 설계합니다.',
     },
     {
       content:

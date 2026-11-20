@@ -21,14 +21,14 @@ export const Skill = {
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
   return (
-    <div className="resume-section">
+    <section id="skills" className="resume-section">
       <EmptyRowCol>
         <Row className="pb-3 resume-section-heading">
           <Col>
-            <h4 className="resume-section-title">
-              <span style={Style.blue}>SKILL</span>
+            <h2 className="resume-section-title">
+              <span style={Style.blue}>기술</span>
               <SkillTooltip content={payload.tooltip || ''} />
-            </h4>
+            </h2>
           </Col>
         </Row>
         <div className="resume-section-content resume-skill-content">
@@ -37,7 +37,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
           ))}
         </div>
       </EmptyRowCol>
-    </div>
+    </section>
   );
 }
 

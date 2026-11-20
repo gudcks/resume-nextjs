@@ -18,7 +18,7 @@ export const Profile = {
 };
 
 function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
-  const { image, contact, name, notice } = payload;
+  const { image, contact, name, notice, summary } = payload;
   return (
     <div className="resume-profile">
       <div className="resume-profile-layout">
@@ -26,6 +26,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
         <div className="resume-profile-main">
           {createNameArea(name)}
           {createNoticeArea(notice)}
+          {summary && <p className="resume-profile-summary">{summary}</p>}
           {createProfileContactMap(contact)}
         </div>
       </div>

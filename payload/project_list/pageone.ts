@@ -7,6 +7,19 @@ export const pageone: IProject.Item = {
   where: 'Grit Standard (백엔드 개발자, 6인 팀)',
   descriptions: [
     {
+      content: `<figure class="resume-project-flow">
+        <figcaption>
+          <strong>약 10초 → 약 1초</strong>
+          <span>Java Lambda 첫 실행 대기 시간 · SnapStart 적용 전후</span>
+        </figcaption>
+        <ol role="list" aria-label="물류 문서의 PDF 변환 및 저장 순서">
+          <li>물류 문서</li>
+          <li class="resume-project-flow-key">PDF 변환<small>LibreOffice Lambda Layer</small></li>
+          <li>S3 저장</li>
+        </ol>
+      </figure>`,
+    },
+    {
       content:
         '기술 스택: Java, Spring Boot, JPA/Hibernate, Querydsl, AWS Lambda, MySQL, AWS S3, EKS',
       weight: 'BOLD',
@@ -35,25 +48,17 @@ export const pageone: IProject.Item = {
             },
             {
               content:
-                '문서 처리 지연을 줄이기 위해 LibreOffice Lambda Layer 기반 PDF 변환과 S3 저장 흐름을 구현하고, AWS Lambda SnapStart로 Java Lambda cold start 병목을 줄였습니다.',
-            },
-            {
-              content:
                 '팀 간 API 이해와 데이터 이전 리스크를 줄이기 위해 SQL Migration, Restdocs, Swagger 문서화를 정비했습니다.',
             },
           ],
         },
         {
-          content: '문서 처리 자동화 · Cold Start 10초 → 1초 수준',
+          content: '업무 자동화 성과',
           weight: 'MEDIUM',
           descriptions: [
             {
               content:
                 '물류 업무의 반복 입력과 문서 처리를 자동화해 실무 담당자의 수작업 부담을 줄였습니다.',
-            },
-            {
-              content:
-                'AWS Lambda SnapStart 도입으로 Java Lambda Cold Start를 <b>10초에서 1초</b> 수준으로 단축.',
             },
             {
               content:

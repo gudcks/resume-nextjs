@@ -18,14 +18,15 @@ const profile: IProfile.Payload = {
       icon: faEnvelope,
     },
     {
-      title: 'https://github.com/gudcks',
+      title: 'GitHub · gudcks',
       link: 'https://github.com/gudcks',
       icon: faGithub,
     },
   ],
   notice: {
-    title: 'Java/Spring 백엔드 · 대량 비동기 처리 · LLM 런타임',
+    title: 'Java/Spring 백엔드 개발자',
   },
+  summary: '메일·SMS 발송 구조를 재설계하고, 실시간 AI 면접 엔진을 Java 백엔드로 옮겼습니다.',
 };
 
 export default profile;

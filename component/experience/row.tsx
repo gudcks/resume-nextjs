@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon';
 import { PropsWithChildren } from 'react';
-import { Badge, Col, Row } from 'reactstrap';
+import { Badge } from 'reactstrap';
 import parse from 'html-react-parser';
 import { Style } from '../common/Style';
 import Util from '../common/Util';
@@ -13,16 +13,18 @@ export default function ExperienceRow({
   return (
     <div className="resume-row">
       {index > 0 ? <hr /> : ''}
-      <Row className="resume-item-grid">
-        <Col sm={12} md={3} className="text-md-end resume-meta-column resume-item-meta">
+      <article className="resume-item-grid">
+        <header className="resume-experience-header">
+          <div>
+            <h3 className="resume-item-title">{item.title}</h3>
+            <p className="resume-subtitle" style={Style.gray}>
+              {item.position}
+            </p>
+          </div>
           {createWorkingPeriod(item.startedAt, item.endedAt)}
-        </Col>
-        <Col sm={12} md={9} className="resume-item-body">
-          <h4 className="resume-item-title">{item.title}</h4>
-          <i className="resume-subtitle" style={Style.gray}>
-            {item.position}
-          </i>
-          <ul className="pt-3 resume-experience-list">
+        </header>
+        <div className="resume-item-body">
+          <ul className="resume-experience-list">
             {item.descriptions.map((description, descIndex) => (
               <li key={descIndex.toString()} className={getDescriptionClassName(description)}>
                 {parse(normalizeDescription(description))}
@@ -30,8 +32,8 @@ export default function ExperienceRow({
             ))}
           </ul>
           {createSkillKeywords(item.skillKeywords)}
-        </Col>
-      </Row>
+        </div>
+      </article>
     </div>
   );
 }
@@ -99,9 +101,9 @@ function createWorkingPeriod(startedAtString: string, endedAtString?: string) {
 
   return (
     <div className="resume-period">
-      <h4 className="resume-meta-title" style={Style.gray}>
+      <p className="resume-meta-title" style={Style.gray}>
         {periodTitle}
-      </h4>
+      </p>
       <div className="resume-period-badges">
         {isWorking ? (
           <Badge color="dark" className="resume-experience-badge">

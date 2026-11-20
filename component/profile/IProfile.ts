@@ -23,6 +23,8 @@ export declare namespace IProfile {
     };
     /** ### 연락 수단 목록 */
     contact: Contact[];
+    /** ### 대표 업무를 설명하는 한 문장 */
+    summary?: string;
     /** ### 공지 */
     notice: {
       /** ### 공지 내용 */
