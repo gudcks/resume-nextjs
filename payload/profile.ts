@@ -18,8 +18,8 @@ const profile: IProfile.Payload = {
       icon: faEnvelope,
     },
     {
-      title: 'https://github.com/gudcks0305',
-      link: 'https://github.com/gudcks0305',
+      title: 'https://github.com/gudcks',
+      link: 'https://github.com/gudcks',
       icon: faGithub,
     },
   ],

@@ -1,6 +1,6 @@
 {
   "name": "resume-nextjs",
-  "latestUpdatedAt": "2026-11-09",
+  "latestUpdatedAt": "2026-11-20",
   "version": "1.2.0",
   "description": "Static HTML based RESUME made with next.js",
   "main": "index.js",
@@ -17,10 +17,10 @@
     "typedoc": "typedoc --excludeExternals",
     "typecheck": "next typegen && tsc --noEmit"
   },
-  "homepage": "https://gudcks0305.github.io/resume-nextjs",
+  "homepage": "https://gudcks.github.io/resume-nextjs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gudcks0305/resume-nextjs.git"
+    "url": "git+https://github.com/gudcks/resume-nextjs.git"
   },
   "keywords": [
     "resume",
@@ -34,7 +34,7 @@
   "contributors": [],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gudcks0305/resume-nextjs/issues"
+    "url": "https://github.com/gudcks/resume-nextjs/issues"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
