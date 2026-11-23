@@ -103,7 +103,7 @@ export const acca: IProject.Item = {
       ],
     },
     {
-      content: '면접 가이드 생성과 응시 로그 저장 복구',
+      content: '면접 가이드 생성 장애와 영상 답변 업로드 대응',
       weight: 'MEDIUM',
       descriptions: [
         {
@@ -112,7 +112,7 @@ export const acca: IProject.Item = {
         },
         {
           content:
-            'S3에 직접 올리지 못한 응시 입력 로그를 서버를 거쳐 저장하도록 구현했습니다. 운영 배포 후 <b>이 경로로 저장한 로그 11건</b>을 확인했습니다.',
+            'Mac SEB의 영상 답변 업로드 실패를 실기기에서 재현했습니다. MP4 녹화 시 압축 설정이 유지되도록 수정하고, S3 업로드를 스트리밍으로 전환했습니다.',
         },
       ],
     },
