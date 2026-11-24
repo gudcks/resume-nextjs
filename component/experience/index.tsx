@@ -37,7 +37,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
       <EmptyRowCol>
         <Row className="pb-3 resume-section-heading">
           <Col>
-            <h2 className="resume-section-title" style={Style.blue}>
+            <h2 className="resume-section-title" style={Style.heading}>
               경력 {totalPeriod()}
             </h2>
           </Col>

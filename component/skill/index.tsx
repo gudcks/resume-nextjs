@@ -26,7 +26,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
         <Row className="pb-3 resume-section-heading">
           <Col>
             <h2 className="resume-section-title">
-              <span style={Style.blue}>기술</span>
+              <span style={Style.heading}>기술</span>
               <SkillTooltip content={payload.tooltip || ''} />
             </h2>
           </Col>

@@ -30,7 +30,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
     <div className="resume-section">
       <Row className="resume-introduce">
         <Col xs={12}>
-          <h2 className="resume-section-title" style={Style.blue}>
+          <h2 className="resume-section-title" style={Style.heading}>
             개발 방식
           </h2>
         </Col>

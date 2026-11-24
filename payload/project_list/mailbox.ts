@@ -9,13 +9,13 @@ export const mailbox: IProject.Item = {
     {
       content: `<figure class="resume-project-flow">
         <figcaption>
-          <strong>Lambda 함수 11개 개발</strong>
-          <span>수집·처리·저장·검색 단계 분리</span>
+          <strong>메일 처리 파이프라인</strong>
+          <span>Lambda 함수 11개 개발</span>
         </figcaption>
         <ol role="list" aria-label="메일 처리 시스템의 주요 구성과 역할">
-          <li>다중 이메일 계정<small>메일 수집·동기화</small></li>
-          <li class="resume-project-flow-key">Lambda 이벤트 처리<small>Kafka MSK</small></li>
-          <li>원문 저장·검색<small>S3 · Elasticsearch</small></li>
+          <li>메일 수집·동기화<small>다중 이메일 계정</small></li>
+          <li class="resume-project-flow-key">이벤트 처리<small>AWS Lambda · Kafka MSK</small></li>
+          <li>저장·검색<small>S3 원문 저장 · Elasticsearch 검색</small></li>
         </ol>
       </figure>`,
     },

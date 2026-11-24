@@ -14,7 +14,7 @@ export function CommonSection({
       <EmptyRowCol>
         <Row className="pb-3 resume-section-heading">
           <Col>
-            <h2 className="resume-section-title" style={Style.blue}>
+            <h2 className="resume-section-title" style={Style.heading}>
               <span>{title}</span>
             </h2>
           </Col>

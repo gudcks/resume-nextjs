@@ -14,7 +14,7 @@ export const accaDeliveryHighlight = {
 const queryReads = { before: 277380, after: 1199 };
 const queryReadReduction = ((1 - queryReads.after / queryReads.before) * 100).toFixed(1);
 const excelHeap = { before: 225.9, after: 105.3 };
-const excelHeapRatio = ((excelHeap.after / excelHeap.before) * 100).toFixed(1);
+const excelHeapRatio = (excelHeap.after / excelHeap.before) * 100;
 
 export const accaQueryHighlight = {
   label: '검사 알림 쿼리의 반복 조회 축소',
@@ -42,8 +42,8 @@ export const acca: IProject.Item = {
             <ol role="list" aria-label="안내 발송 처리 순서">
               <li>안내 요청</li>
               <li>발송 대상 준비<small>200건씩 조회해 작업 할당</small></li>
-              <li class="resume-project-flow-key resume-project-flow-dashed">발송 대기열 등록<small>Kafka 비동기 처리</small></li>
-              <li>메일·SMS 발송</li>
+              <li class="resume-project-flow-key resume-project-flow-dashed">외부 대기열 등록 완료<small>Kafka 비동기 · 측정 종료</small></li>
+              <li>메일·SMS 실제 발송<small>대기열 등록 이후</small></li>
             </ol>
           </figure>`,
         },
@@ -65,7 +65,10 @@ export const acca: IProject.Item = {
           content: `<figure class="resume-project-flow">
             <ol role="list" aria-label="라이브면접 답변 처리 순서">
               <li>답변 음성 입력</li>
-              <li class="resume-project-flow-key">실시간으로 음성을 텍스트로 변환<small>실패하거나 결과가 비어 있으면 해당 답변의 녹음으로 다시 변환</small></li>
+              <li class="resume-project-flow-key">
+                실시간 음성을 텍스트로 변환
+                <small class="resume-project-flow-branch"><b>실패·빈 결과 시</b> 해당 답변 녹음으로 다시 변환</small>
+              </li>
               <li>답변 제출 후 다음 질문 수신<small>서버 전송 이벤트(SSE)</small></li>
             </ol>
           </figure>`,
@@ -87,7 +90,8 @@ export const acca: IProject.Item = {
         {
           content: `<figure id="${queryAnchor}" class="resume-metric-comparison">
             <figcaption>
-              <strong>DB 읽기 요청 수 ${queryReadReduction}% 감소</strong>
+              <strong>DB 읽기 요청 수</strong>
+              <b class="resume-metric-result">${queryReadReduction}% 감소</b>
               <small>${accaQueryHighlight.context}</small>
             </figcaption>
             <dl>
@@ -124,6 +128,7 @@ export const acca: IProject.Item = {
           content: `<figure class="resume-metric-comparison resume-metric-comparison-bars">
             <figcaption>
               <strong>엑셀 생성 중 최대 힙 메모리</strong>
+              <b class="resume-metric-result">${(100 - excelHeapRatio).toFixed(1)}% 감소</b>
               <small>가상 데이터 10만 행 · JDK 21 · 동일 힙 제한 256 MiB · 각 1회 실행</small>
             </figcaption>
             <dl>
@@ -138,7 +143,9 @@ export const acca: IProject.Item = {
                 <dt>개선 후</dt>
                 <dd>
                   <b>${excelHeap.after} MiB</b>
-                  <span class="resume-metric-bar" aria-hidden="true" style="--metric-bar-width: ${excelHeapRatio}%"></span>
+                  <span class="resume-metric-bar" aria-hidden="true" style="--metric-bar-width: ${excelHeapRatio.toFixed(
+                    1,
+                  )}%"></span>
                 </dd>
               </div>
             </dl>

@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 
 /** Style 추론을 위하여.. */
 type TStyleKey =
-  | 'blue'
+  | 'heading'
   | 'gray'
   | 'global'
   | 'sign'
@@ -12,12 +12,12 @@ type TStyleKey =
   | 'skillKeywordBadge';
 
 export const Style: Record<TStyleKey, CSSProperties> = {
-  blue: {
-    color: '#0f766e',
+  heading: {
+    color: 'var(--resume-ink, #1c2532)',
   },
 
   gray: {
-    color: 'gray',
+    color: 'var(--resume-muted, #526176)',
   },
 
   global: {

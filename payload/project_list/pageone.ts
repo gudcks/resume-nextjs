@@ -9,13 +9,13 @@ export const pageone: IProject.Item = {
     {
       content: `<figure class="resume-project-flow">
         <figcaption>
-          <strong>약 10초 → 약 1초</strong>
-          <span>Java Lambda 첫 실행 대기 시간 · SnapStart 적용 전후</span>
+          <strong>첫 실행 대기 약 10초 → 약 1초</strong>
+          <span>Java Lambda · SnapStart 적용 전후</span>
         </figcaption>
         <ol role="list" aria-label="물류 문서의 PDF 변환 및 저장 순서">
-          <li>물류 문서</li>
+          <li>변환 대상<small>물류 문서</small></li>
           <li class="resume-project-flow-key">PDF 변환<small>LibreOffice Lambda Layer</small></li>
-          <li>S3 저장</li>
+          <li>변환본 저장<small>Amazon S3</small></li>
         </ol>
       </figure>`,
     },

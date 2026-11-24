@@ -7,15 +7,15 @@ export const aimsWeb: IProject.Item = {
   where: 'Grit Standard (백엔드 개발자, 3인 팀)',
   descriptions: [
     {
-      content: `<figure class="resume-project-flow">
+      content: `<figure class="resume-metric-comparison">
         <figcaption>
           <strong>반복 업무 웹 전환</strong>
           <span>AWS Kubernetes · ArgoCD 기반 GitOps 배포</span>
         </figcaption>
-        <ol role="list" aria-label="물류 ERP 업무 전환 전후">
-          <li>기존 Windows ERP<small>실무 담당자의 반복 업무</small></li>
-          <li class="resume-project-flow-key">FastAPI 웹 서비스<small>처리 흐름 자동화</small></li>
-        </ol>
+        <dl>
+          <div><dt>전환 전</dt><dd>Windows ERP<small>실무 담당자의 반복 작업</small></dd></div>
+          <div><dt>전환 후</dt><dd>FastAPI 웹 서비스<small>반복 업무 처리 자동화</small></dd></div>
+        </dl>
       </figure>`,
     },
     {

@@ -36,7 +36,7 @@ function Component({ payload }: PropsWithChildren<{ payload: Payload }>) {
 
 function createNameArea(name: Payload['name']) {
   return (
-    <h1 className="resume-profile-name" style={Style.blue}>
+    <h1 className="resume-profile-name" style={Style.heading}>
       {name.title} <small>{name.small || ''}</small>
     </h1>
   );
